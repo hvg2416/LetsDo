@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/private_task__anim_view"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_rawRes="@raw/private_task_anim"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <ImageView
+        android:id="@+id/rounded_upper_corner_foreground_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_below="@id/private_task__anim_view"
+        android:background="@drawable/background_shape_private_task"
+        android:elevation="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAB_new_private_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:theme="@style/FABTheme"
+        android:layout_centerHorizontal="true"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:clickable="true"
+        app:elevation="10dp"
+        android:src="@drawable/plus_icon"/>
+
+    <TextView
+        android:id="@+id/your_tasks_header_text_view"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FAB_new_private_task"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:text="Private Tasks"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif-monospace"
+        android:background="@drawable/text_view_background_shape"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/private_task_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/your_tasks_header_text_view"
+        android:elevation="10dp"
+        android:layout_margin="24dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/empty_task_list_anim_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/your_tasks_header_text_view"
+        app:lottie_rawRes="@raw/empty_task_list_anim"
+        android:layout_marginTop="100dp"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+</RelativeLayout>

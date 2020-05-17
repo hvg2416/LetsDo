@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/task_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="PLACE HOLDER"/>
+        <TextView
+            android:id="@+id/task_desc_text_view"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_below="@id/task_title_text_view"
+            android:layout_height="wrap_content"
+            android:text="PLACE HOLDER"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/delete_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleY="1.4"
+                android:scaleX="1.4"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/delete_icon"/>
+
+            <ImageView
+                android:id="@+id/edit_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/edit_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

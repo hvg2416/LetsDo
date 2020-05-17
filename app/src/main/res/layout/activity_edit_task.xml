@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DF8E24AA">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/edit_task_anim_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/edit_task_anim"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edit_task_anim_view"
+        android:background="@drawable/background_shape_new_task">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+            <TextView
+                android:id="@+id/edit_task_header_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="EDIT TASK"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/task_details_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/FAB_update_task"
+                android:layout_marginTop="24dp"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/edit_task_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+                <EditText
+                    android:id="@+id/edit_task_title_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Type here..."
+                    android:layout_marginRight="4dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background_shape"
+                    android:inputType="textShortMessage"/>
+                <TextView
+                    android:id="@+id/edit_task_description_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Description"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"/>
+                <EditText
+                    android:id="@+id/edit_task_description_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="start"
+                    android:hint="Type here..."
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background_shape"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/FAB_update_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_task_header_text_view"
+                android:layout_alignParentRight="true"
+                android:theme="@style/FABTheme2"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:src="@drawable/tick_icon_2"
+                android:text="SAVE" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

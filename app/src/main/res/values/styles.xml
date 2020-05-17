@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Floating Action Button Theme (Add new task)-->
+    <style name="FABTheme" parent="AppTheme">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <!-- Floating Action Button Theme (Save new task)-->
+    <style name="FABTheme2" parent="AppTheme">
+        <item name="colorAccent">#DF8E24AA</item>
+    </style>
+
+    <!-- Floating Action Button Theme (Save new task)-->
+    <style name="FABTheme3" parent="AppTheme">
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+    </style>
+
+</resources>
